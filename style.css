@@ -1,0 +1,89 @@
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+html{
+      font-size: 14px;
+}
+
+body{
+      font-family: monospace, arial, sans-serif;
+      color: #000;
+      background-color: hsl(185, 75%, 39%);
+      max-width: 100%;
+}
+
+img{
+      max-width: 100%;
+}
+
+.wrapper{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.profile-card{
+      margin: 1.5em;
+      text-align: center;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+}
+
+.profile-hero section{
+      padding: .5em 0;
+}
+
+.profile-hero section img{
+      transform: translateY(-60px);
+      border-radius: 50%;
+      border: 2px solid #fff;
+}
+
+.profile-hero section blockquote{
+      transform: translateY(-40px);
+}
+
+.profile-hero section blockquote p{
+      margin-top: .8em;     
+}
+
+.profile-hero{
+      border-bottom: .05px solid hsl(0, 0%, 59%);
+}
+
+#avatar-age{
+      font-weight: 200;
+}
+
+figcaption{
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+      padding: 1em 0;
+}
+
+figcaption span p{
+      margin-top: .5em;
+}
+
+#top{
+      position:absolute ;
+      top: -150px;
+      left: -150px;
+      width: 500px;
+      z-index: -1;
+}
+
+#bottom{
+      position: absolute;
+      bottom: -150px;
+      right: -150px;
+      width: 500px;
+      z-index: -1;
+}
