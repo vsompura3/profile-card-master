@@ -1,89 +1,143 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+      --clr-cyan: hsl(185, 75%, 39%);
+      --clr-dark-blue: hsl(229, 23%, 23%);
+      --clr-grey-blue: hsl(227, 10%, 46%);
+      --clr-dark-grey: hsl(0, 0%, 59%);
+}
+
+*,
+*::before,
+*::after{
       padding: 0;
       margin: 0;
-      box-sizing: border-box;
+      box-sizing: inherit;
 }
 
 html{
-      font-size: 14px;
+      font-size: 62.5%;
 }
 
 body{
-      font-family: monospace, arial, sans-serif;
-      color: #000;
-      background-color: hsl(185, 75%, 39%);
-      max-width: 100%;
+      box-sizing: border-box;
+      font-family: 'Kumbh Sans', sans-serif;
+      font-size: 1.8rem;
 }
 
-img{
-      max-width: 100%;
-}
-
-.wrapper{
+main{
+      background-color: var(--clr-cyan);
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-}
-
-.profile-card{
-      margin: 1.5em;
-      text-align: center;
-      border-radius: 15px;
+      position: relative;
       overflow: hidden;
-      box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card{
+      /* display: none; */
       background-color: #fff;
+      text-align: center;
+      border-radius: 1rem;
+      box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      z-index: 10;
+      /* margin: 1rem; */
 }
 
-.profile-hero section{
-      padding: .5em 0;
+.card__pattern{
+      background-image: url(./images/bg-pattern-card.svg);
+      min-height: 15rem;
 }
 
-.profile-hero section img{
-      transform: translateY(-60px);
+.card__profile{
+      padding: 3rem 8rem;
+}
+
+.card__avatar img{
       border-radius: 50%;
-      border: 2px solid #fff;
+      transform: translateY(-8rem);
+      border: 5px solid #fff;
 }
 
-.profile-hero section blockquote{
-      transform: translateY(-40px);
+.card__avatar-name{
+      margin-top: -5rem;
+      margin-bottom: 1.5rem;
 }
 
-.profile-hero section blockquote p{
-      margin-top: .8em;     
+.card__avatar-name span{
+      font-size: 2rem;
 }
 
-.profile-hero{
-      border-bottom: .05px solid hsl(0, 0%, 59%);
+.card__avatar-name span:first-child{
+      color: var(--clr-dark-blue);
+      font-weight: 700;
+      margin-right: .5rem;
 }
 
-#avatar-age{
-      font-weight: 200;
+.card__avatar-name span:last-child{
+      font-weight: 400;
+      margin-left: 0.5rem;
+      color: var(--clr-dark-blue);
 }
 
-figcaption{
+.card__city{
+      color: var(--clr-dark-blue);
+}
+
+.card__stats{
+      border-top: .5px solid var(--clr-dark-grey);
       display: flex;
-      justify-content: space-around;
-      align-items: baseline;
-      padding: 1em 0;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem  3rem;
 }
 
-figcaption span p{
-      margin-top: .5em;
+.card__stat-value{
+      font-weight: 700;
+      color: var(--clr-dark-blue);
 }
 
-#top{
-      position:absolute ;
-      top: -150px;
-      left: -150px;
-      width: 500px;
-      z-index: -1;
+.card__stat-info{
+      font-weight: 400;
+      font-size: 1.25rem;
+      margin-top: .5rem;
 }
 
-#bottom{
+.top,.bottom{
       position: absolute;
-      bottom: -150px;
-      right: -150px;
-      width: 500px;
-      z-index: -1;
+      width: 150%;
+      z-index: 1;
+}
+
+.top{
+      top: -200px;
+      left: -300px;
+}
+
+.bottom{
+      bottom: -200px;
+      right: -300px;
+}
+
+
+@media screen and (min-width: 750px) {
+      .top,.bottom{
+            width: 90%;
+      }
+}
+
+@media screen and (min-width: 1020px) {
+      .top,.bottom{
+            width: 70%;
+      }
+
+      .top{
+            top:-80%;
+      }
+
+      .bottom{
+            bottom: -80%;
+      }
 }
